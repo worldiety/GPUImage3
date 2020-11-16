@@ -9,7 +9,7 @@ public class PictureInput: ImageSource {
     public let targets = TargetContainer()
     var internalTexture:Texture?
     var hasProcessedImage:Bool = false
-    var internalImage:CGImage?
+    public internal(set) var internalImage:CGImage?
 
     public init(image:CGImage, smoothlyScaleOutput:Bool = false, orientation:ImageOrientation = .portrait) {
         internalImage = image
